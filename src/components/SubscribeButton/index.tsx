@@ -11,15 +11,18 @@ export function SubscribeButton() {
       signIn('github')
       return;
     }
-
+    
     try {
       const response = await api.post('/subscribe');
+      console.log(response)
+
       const { sessionId } = response.data;
       const stripe = await getStripeJs();
 
       await stripe.redirectToCheckout({ sessionId: sessionId})
 
     }catch (err){
+      console.log(err)
       alert(err.message)
     }
   }
