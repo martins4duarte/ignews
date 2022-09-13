@@ -1,5 +1,6 @@
 {
   "apiEndpoint": "https://posts-ignews-project.prismic.io/api/v2",
+  "repoName": "posts-ignews-project",
   "libraries": [
     "@/slices"
   ],
